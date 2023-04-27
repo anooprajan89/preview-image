@@ -18,12 +18,30 @@
                         <div class="card-header">
                             <div class="card-title">Kanban Board</div>
                             <div class="card-action">
-                                <!-- <p>Sort: {{ selectedSort }}</p>
-                                <select #sort (change)="onSelected(sort.value)">
-                                    <option default value="Date created">Date created</option>
-                                    <option value="Sort by name">Sort by name</option>
-                                    <option value="Sort by role">Sort by role</option>
-                                </select> -->
+                                <div class="select-container">
+                                    <div class="select-title">Filter:</div>
+                                    <select>
+                                        <option default>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
+                                <div class="select-container">
+                                    <div class="select-title">Batch:</div>
+                                    <select>
+                                        <option default>Progress(01)</option>
+                                        <option>Progress(01)</option>
+                                        <option>Progress(02)</option>
+                                    </select>
+                                </div>
+                                <div class="select-container">
+                                    <div class="select-title">Sort:</div>
+                                    <select>
+                                        <option default>Date created</option>
+                                        <option>Sort by name</option>
+                                        <option>Sort by role</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="card-content">

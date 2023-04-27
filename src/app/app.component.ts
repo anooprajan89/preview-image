@@ -17,9 +17,4 @@ export class AppComponent {
     this.apiService.getLegentData().subscribe(legentData => this.accordianVerticalData = legentData);
     this.apiService.getManufactureData().subscribe(manufacturingData => this.accordianHorizontalData = manufacturingData);
   }
-
-  
-	onSelected(value:string): void {
-		this.selectedSort = value;
-	}
 }

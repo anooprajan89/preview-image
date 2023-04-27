@@ -72,6 +72,17 @@
 
         .card-action {
             font-size: 14px;
+            display: flex;
+            .select-container{
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+                select{
+                    background: transparent;
+                    border: 0;
+                    cursor: pointer;
+                }
+            }
         }
     }
 
