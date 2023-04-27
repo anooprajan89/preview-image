@@ -1,0 +1,20 @@
+<div class="accordian-wrapper">
+    <div class="accordian-header">
+        <div class="accordian-title">123 Legend</div>
+        <div class="accordian-action" (click)="toggleAccordian()"><i class="fa fa-chevron-down" [ngClass]="isExpanded ? 'expand' : ''"></i></div>
+    </div>
+    <div *ngIf="isExpanded" class="accordian-content" [ngClass]="isExpanded ? 'expand' : ''">
+        <div class="status-container">
+            <div class="status-header">Status</div>
+            <div class="status-content">
+                <div *ngFor="let status of statusData" class="status" [ngClass]="status.type">{{status.name}}</div>
+            </div>
+        </div>
+        <div class="events-container">
+            <div class="events-header">Event</div>
+            <div class="events-content">
+                <div *ngFor="let event of eventData;" class="events">{{event.name}}</div>
+            </div>
+        </div>
+    </div>
+</div>

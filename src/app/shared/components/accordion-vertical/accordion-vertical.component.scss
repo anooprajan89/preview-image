@@ -1,0 +1,96 @@
+.accordian-wrapper {
+    width: 100%;
+    box-shadow: 2px 3px 6px rgb(0 0 0 / 14%);
+    margin: 0 auto 30px auto;
+    border-radius: 5px;
+    .accordian-header {
+        background-color: #f9f9f9;
+         padding: 20px;
+         display: flex;
+         justify-content: space-between;
+        .accordian-title {
+            font-size: 16px;
+        }
+        .accordian-action{
+            padding: 0 10px;
+            cursor: pointer;
+            i{
+                transition: 0.3s all;
+                &.expand{
+                    transform: rotateZ(180deg);
+                }
+            }
+            
+        }
+    }
+
+    .accordian-content {
+        font-size: 14px;
+        padding: 20px;
+
+        .status-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            .status-header {
+                width: 150px;
+            }
+
+            .status-content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 30px;
+                .status{
+                    position: relative;
+                    margin-left: 12px;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        top: 2px;
+                        left: -12px;
+                        bottom: 2px;
+                        width: 8px;
+                        background-color: #333;
+                    }
+                    &.due {
+                        &::before{
+                            background-color: #feb343;
+                        }
+                    }
+                    &.overdue {
+                        &::before{
+                            background-color: #eb4747;
+                        }
+                    }
+                    &.hold {
+                        &::before{
+                            background-color: #716c6c;
+                        }
+                    }
+                }
+            }
+        }
+
+        .events-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            .events-header {
+                width: 150px;
+            }
+
+            .events-content {
+                width: calc(100% - 150px);
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                .events{
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
