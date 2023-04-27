@@ -1,0 +1,84 @@
+// Page layout styles 
+.page-layout {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .left-side-panel {
+        background-color: #fff;
+        width: 80px;
+        z-index: 1;
+        box-shadow: 2px 3px 6px rgb(0 0 0 / 14%);
+    }
+
+    .right-side-panel {
+        background-color: #f9f9f9;
+        padding: 40px 30px;
+        width: calc(100% - 80px);
+        .page-header{
+            height: 130px;
+        }
+        .page-content{
+            margin-top: 30px;
+        }
+    }
+}
+
+
+// Horizonatal tab styles
+.horizontal-tab {
+    .horizontal-tab-header {
+        border-bottom: 1px solid #b1b1b1;
+        ul {
+            
+            li {
+                list-style: none;
+                display: inline-block;
+                padding: 5px 20px;
+                cursor: pointer;
+                &.selected {
+                    color: red;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        height: 3px;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .horizontal-tab-content {
+        padding: 30px 0;
+    }
+}
+
+// Card component
+.card {
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .card-action {
+            font-size: 14px;
+        }
+    }
+
+    .card-content {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 3px 6px rgb(0 0 0 / 14%);
+        padding: 35px;
+    }
+}

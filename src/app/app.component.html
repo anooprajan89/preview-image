@@ -1,0 +1,38 @@
+<div class="page-layout">
+    <div class="left-side-panel">
+        <div class="navigation-menu"></div> <!-- Call the navigation component -->
+    </div>
+    <div class="right-side-panel">
+        <div class="page-header"></div>
+        <div class="page-content">
+            <div class="horizontal-tab">
+                <div class="horizontal-tab-header">
+                    <ul>
+                        <li class="selected">Batch Details</li>
+                        <li>Analytics</li>
+                        <li>Performance</li>
+                    </ul>
+                </div>
+                <div class="horizontal-tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Kanban Board</div>
+                            <div class="card-action">
+                                <!-- <p>Sort: {{ selectedSort }}</p>
+                                <select #sort (change)="onSelected(sort.value)">
+                                    <option default value="Date created">Date created</option>
+                                    <option value="Sort by name">Sort by name</option>
+                                    <option value="Sort by role">Sort by role</option>
+                                </select> -->
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <app-accordion-vertical [accordianVerticalInput]="accordianVerticalData"></app-accordion-vertical>
+                            <app-accordion-horizontal [accordianHorizontalInput]="accordianHorizontalData"></app-accordion-horizontal>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
