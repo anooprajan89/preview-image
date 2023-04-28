@@ -15,6 +15,7 @@
         margin-right: 10px;
         box-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
         flex-shrink: 0;
+        border-radius: 8px;
         .accordian-header {
             display: flex;
             flex-direction: column;
@@ -32,7 +33,8 @@
             }
 
             .accordian-title {
-                font-size: 14px;
+                font-size: 16px;
+                font-weight: 600;
                 transform: perspective(1px) scale(1.005) rotateZ(180deg);
                 margin: 0 auto;
                 writing-mode: tb-rl;
@@ -47,12 +49,13 @@
             }
 
             .content-cards-count {
-                background-color: #d7d7d7;
-                font-size: 12px;
+                background: #E7E7E7;
+                font-size: 14px;
+                font-weight: 600;
                 color: #333;
-                width: 18px;
-                height: 18px;
-                border-radius: 3px;
+                width: 32px;
+                height: 32px;
+                border-radius: 8px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -87,7 +90,7 @@
                 flex-direction: row;
                 align-items: center;
                 border-bottom: 1px solid #e7e7e7;
-                height: 55px;
+                height: 70px;
 
                 .toggle-btn {
                     margin: 5px;

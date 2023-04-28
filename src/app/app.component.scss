@@ -13,11 +13,57 @@
     }
 
     .right-side-panel {
-        background-color: #f9f9f9;
+        background-color: #f8f8f8;
         padding: 40px 30px;
         width: calc(100% - 80px);
+        .page-header-actions{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 13px;
+            .breadcrumb{
+                a{
+                    font-size: 16px;
+                    color: #676767;
+                    i{
+                        margin-right: 12px;
+                    }
+                }
+            }
+            .toolbar{
+                display: flex;
+                align-items: center;
+                i{
+                    color: #34373F;
+                    font-size: 18px;
+                    margin: 0 10px;
+                }
+            }
+        }
         .page-header{
-            height: 130px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .page-title{
+                font-size: 24px;
+                color: #34373F;
+                font-weight: bold;
+            }
+            .page-actions{
+                a{
+                    margin: 0 26px;
+                }
+                select{
+                    background: transparent;
+                    border: 0;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+            }
+        }
+        .content-search-container{
+
         }
         .page-content{
             margin-top: 30px;
@@ -31,7 +77,6 @@
     .horizontal-tab-header {
         border-bottom: 1px solid #b1b1b1;
         ul {
-            
             li {
                 list-style: none;
                 display: inline-block;
@@ -66,8 +111,9 @@
         justify-content: space-between;
         margin-bottom: 10px;
         .card-title {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
+            color: #34373F;
         }
 
         .card-action {
@@ -77,11 +123,6 @@
                 display: flex;
                 align-items: center;
                 margin-left: 20px;
-                select{
-                    background: transparent;
-                    border: 0;
-                    cursor: pointer;
-                }
             }
         }
     }
