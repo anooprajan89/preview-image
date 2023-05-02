@@ -63,10 +63,41 @@
             }
         }
         .content-search-container{
-
+            display: flex;
+            align-items: center;
+            
+            
         }
         .page-content{
             margin-top: 30px;
+        }
+    }
+}
+
+// Multi select style
+ng-multiselect-dropdown{
+    width: 40%;
+    margin-right: 30px;
+    
+}
+.multiselect-dropdown {
+    .dropdown-btn {
+        background: #FFFFFF;
+        border: 0.8px solid #34373F;
+        border-radius: 4px;
+        padding: 6px 33px;
+        .selected-item-container {
+            .selected-item {
+                border: 1px solid #EDF2F4!important;
+                background: #EDF2F4!important;
+                color: #2D2D2D!important;
+                border-radius: 4px!important;
+                padding: 2px 4px 2px 8px!important;
+                margin-bottom: 0;
+                a{
+                    color: #ABABAB!important;
+                }
+            }
         }
     }
 }

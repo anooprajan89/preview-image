@@ -4,15 +4,17 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './services/api.service';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     SharedModule,
     HttpClientModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
