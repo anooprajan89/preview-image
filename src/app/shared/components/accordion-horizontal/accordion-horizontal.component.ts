@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { AccordianHorizontalModel } from '../../models/accordion-horizontal.modal';
 
 @Component({
@@ -11,8 +11,10 @@ export class AccordionHorizontalComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(this.accordianHorizontalInput)
   }
+
 
   // Function for expand and collapse accordian content
   toggleAccordian(item: AccordianHorizontalModel) {

@@ -15,7 +15,6 @@ export class AccordionVerticalComponent {
   constructor() { }
   ngOnChanges(changes: SimpleChanges) {
     // changes.prop contains the old and the new value...
-    console.log(this.accordianVerticalInput)
     this.statusData = this.accordianVerticalInput?.status;
     this.eventData = this.accordianVerticalInput?.events;
   }

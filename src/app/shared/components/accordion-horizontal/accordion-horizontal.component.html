@@ -5,11 +5,11 @@
           <span *ngIf="!item.isExpanded" class="expand">+</span>
           <span *ngIf="item.isExpanded" class="collapse">-</span>
         </div>
-        <div class="accordian-title">{{item.title}}</div>
-        <div class="content-cards-count">{{item.count}}</div>
+        <div class="accordian-title">{{item.name}}</div>
+        <div class="content-cards-count">{{item.id}}</div>
       </div>
       <div class="accordian-content">
-        <div class="card" *ngFor="let widget of item.widget;">{{widget.title}}</div>
+        <div class="card" *ngFor="let widget of item.cardList;">{{widget.brandName}}</div>
       </div>
     </div>
   </div>

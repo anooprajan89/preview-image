@@ -13,38 +13,47 @@ export class AppComponent {
   public accordianVerticalData: any;
   public accordianHorizontalData: any;
   public selectedSort = 'Date created';
+  public fullCardList:any = []
+  public selectedFilterCards = []
 
-  dropdownList:any = [];
-  selectedItems:any = [];
-  dropdownSettings:any = {};
+  cardsFilterDropdownList:any = [];
+  cardsFilterDropdownSettings:any= {
+    searchPlaceholderText: "search",
+    singleSelection: false,
+    idField: 'item_id',
+    textField: 'item_text',
+    itemsShowLimit: 3,
+    allowSearchFilter: true,
+    clearSearchFilter: true,
+    enableCheckAll: false,
+  }
 
   ngOnInit(): void {
     this.apiService.getLegentData().subscribe(legentData => this.accordianVerticalData = legentData);
-    this.apiService.getManufactureData().subscribe(manufacturingData => this.accordianHorizontalData = manufacturingData);
-
-    this.dropdownList = [
-      { item_id: 1, item_text: 'Alofisel' },
-      { item_id: 2, item_text: 'Madrid' },
-      { item_id: 3, item_text: 'Drug Substance' },
-    ];
-    // this.selectedItems = [
-    //   { item_id: 3, item_text: 'Pune' },
-    //   { item_id: 4, item_text: 'Navsari' }
-    // ];
-    this.dropdownSettings = {
-      singleSelection: false,
-      idField: 'item_id',
-      textField: 'item_text',
-      itemsShowLimit: 3,
-      allowSearchFilter: true,
-      clearSearchFilter: true
-    };
+    this.apiService.getSwimlanesData().subscribe((swimLaneData:any) => {
+      this.accordianHorizontalData = [];
+      swimLaneData.forEach((item:any) => {
+        this.fullCardList.push({...item, isExpanded: false})
+        this.cardsFilterDropdownList.push({
+              item_id: item.id,
+              item_text: item.name
+            });
+        });
+    });
   }
 
-  onItemSelect(item: any) {
-    console.log(item);
+  onItemSelect(selectedItem: any) {
+    const selectedFullItem = [...this.fullCardList].filter((item)=>item.name === selectedItem.item_text);
+    if(selectedFullItem && selectedFullItem.length){
+      this.accordianHorizontalData.push(selectedFullItem[0])
+    }
   }
-  onSelectAll(items: any) {
-    console.log(items);
+  public onItemDeselect(deselectedItem: any) {
+    this.accordianHorizontalData = this.accordianHorizontalData.filter((item:any)=>item.name !== deselectedItem.item_text);
+  }
+
+  reset(){
+    this.accordianHorizontalData = []
+    this.selectedFilterCards = []
   }
 }

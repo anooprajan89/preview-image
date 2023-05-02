@@ -23,14 +23,20 @@
             </div>
         </div>
         <div class="content-search-container">
-            <ng-multiselect-dropdown
-            [placeholder]="'custom placeholder'"
-            [settings]="dropdownSettings"
-            [data]="dropdownList"
-            (onSelect)="onItemSelect($event)"
-            >
-            </ng-multiselect-dropdown>
-            <a href="" class="text-link">Clear all</a>
+            <ng-container *ngIf="cardsFilterDropdownList?.length">
+                <ng-multiselect-dropdown
+                [placeholder]="'custom placeholder'"
+                [settings]="cardsFilterDropdownSettings"
+                [data]="cardsFilterDropdownList"
+                (onSelect)="onItemSelect($event)"
+                (onDeSelect)="onItemDeselect($event)"
+                [(ngModel)] = "selectedFilterCards"
+                >
+                
+                </ng-multiselect-dropdown>
+            </ng-container>
+            
+            <a href="javascript:;" class="text-link" (click)="reset()">Clear all</a>
         </div>
         <div class="page-content">
             <div class="horizontal-tab">

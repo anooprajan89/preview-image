@@ -15,4 +15,8 @@ export class ApiService {
   getManufactureData(){
     return this.httpService.get("./assets/json/manufacturing-data.json");
   }
+
+  getSwimlanesData(): any{
+    return this.httpService.get("./assets/json/swimlanes.json");
+  }
 }

@@ -1,10 +1,14 @@
 export interface AccordianHorizontalModel {
-    title: string;
-    count: number;
-    isExpanded: boolean;
-    widget: WidgetModel[]
+    name: string;
+    id: number;
+    isExpanded?: boolean;
+    cardList: CardList[]
 }
 
-export interface WidgetModel {
-    title: string;
+export interface CardList {
+    batchNumber: string;
+    brandName: string;
+    manufactureStage:  string;
+    imageLink: string;
+    event: [];
 }
