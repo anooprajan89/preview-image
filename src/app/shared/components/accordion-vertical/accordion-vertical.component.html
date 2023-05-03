@@ -1,6 +1,6 @@
 <div class="accordian-wrapper">
     <div class="accordian-header">
-        <div class="accordian-title">123 Legend</div>
+        <div class="accordian-title">Legend</div>
         <div class="accordian-action" (click)="toggleAccordian()"><i class="fa fa-chevron-down" [ngClass]="isExpanded ? 'expand' : ''"></i></div>
     </div>
     <div *ngIf="isExpanded" class="accordian-content" [ngClass]="isExpanded ? 'expand' : ''">
@@ -13,7 +13,7 @@
         <div class="events-container">
             <div class="events-header">Event</div>
             <div class="events-content">
-                <div *ngFor="let event of eventData;" class="events">{{event.name}}</div>
+                <div *ngFor="let event of eventData;" class="events"><i class="fa fa-bookmark-o"></i> {{event.name}}</div>
             </div>
         </div>
     </div>
