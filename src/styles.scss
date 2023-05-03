@@ -1,21 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     outline: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 ul {
-    li{
+    li {
         list-style: none;
     }
 }
 
-.text-link{
+.text-link {
     font-size: 16px;
     color: #676767;
     font-weight: 600;
@@ -25,7 +27,7 @@ ul {
     cursor: pointer;
 }
 
-select{
+select {
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -34,26 +36,40 @@ select{
 }
 
 ::-webkit-scrollbar {
-    width: 10px;               /* width of the entire scrollbar */
+    width: 10px;
+    /* width of the entire scrollbar */
     height: 10px;
-  }
-  
- ::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
-  }
-  
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
+
 ::-webkit-scrollbar-thumb {
-    background-color: #A1A4AC;    /* color of the scroll thumb */
-    border-radius: 8px;       /* roundness of the scroll thumb */
-  }
+    background-color: #A1A4AC;
+    /* color of the scroll thumb */
+    border-radius: 8px;
+    /* roundness of the scroll thumb */
+}
 
 // To avoid smooth transition
 @keyframes text-fade {
-    from {opacity: 0}
-    to {opacity: 1;}
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes expand {
-    from {max-height: 0;}
-    to {max-height: 500px;}
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 500px;
+    }
 }
