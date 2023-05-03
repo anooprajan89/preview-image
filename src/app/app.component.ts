@@ -33,7 +33,8 @@ export class AppComponent {
     this.apiService.getSwimlanesData().subscribe((swimLaneData:any) => {
       this.accordianHorizontalData = [];
       swimLaneData.forEach((item:any) => {
-        this.fullCardList.push({...item, isExpanded: false})
+        this.fullCardList.push({...item, isExpanded: false});
+        this.fullCardList.push({...item.cardList, widgetAction: false});
         this.cardsFilterDropdownList.push({
               item_id: item.id,
               item_text: item.name
@@ -45,7 +46,8 @@ export class AppComponent {
   onItemSelect(selectedItem: any) {
     const selectedFullItem = [...this.fullCardList].filter((item)=>item.name === selectedItem.item_text);
     if(selectedFullItem && selectedFullItem.length){
-      this.accordianHorizontalData.push(selectedFullItem[0])
+      this.accordianHorizontalData.push(selectedFullItem[0]);
+      console.log(this.accordianHorizontalData)
     }
   }
   public onItemDeselect(deselectedItem: any) {

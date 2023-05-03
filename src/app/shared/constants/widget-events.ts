@@ -1,0 +1,1 @@
+export const EVENTNAME = 'Event status loaded'

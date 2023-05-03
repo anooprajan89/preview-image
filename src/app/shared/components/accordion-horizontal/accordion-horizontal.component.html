@@ -1,15 +1,53 @@
 <div class="accordian-container">
-    <div *ngFor="let item of accordianHorizontalInput;" class="accordian-item" [ngClass]="item.isExpanded ? 'expanded' : ''">
-      <div class="accordian-header">
-        <div class="toggle-btn" (click)="toggleAccordian(item)">
-          <span *ngIf="!item.isExpanded" class="expand">+</span>
-          <span *ngIf="item.isExpanded" class="collapse">-</span>
-        </div>
-        <div class="accordian-title">{{item.name}}</div>
-        <div class="content-cards-count">{{item.id}}</div>
+  <div *ngFor="let item of accordianHorizontalInput;" class="accordian-item"
+    [ngClass]="item.isExpanded ? 'expanded' : ''">
+    <div class="accordian-header">
+      <div class="toggle-btn" (click)="toggleAccordian(item)">
+        <span *ngIf="!item.isExpanded" class="expand">+</span>
+        <span *ngIf="item.isExpanded" class="collapse">-</span>
       </div>
-      <div class="accordian-content">
-        <div class="card" *ngFor="let widget of item.cardList;">{{widget.brandName}}</div>
+      <div class="accordian-title">{{item.name}}</div>
+      <div class="content-cards-count">{{item.cardList.length}}</div>
+    </div>
+    <div class="accordian-content">
+      <div class="widget-card" *ngFor="let widget of item.cardList; index as i">
+        <div class="widget-card-header">
+          <div class="widget-card-status" [ngClass]="{
+            'batch-overdue':widget.status === 'Batch Overdue',
+            'incoming-due-date':widget.status === 'Incoming Due Date',
+            'batch-on-hold':widget.status === 'Batch on Hold',
+            'no-change':widget.status === 'No change'
+          }"></div>
+          <div class="widget-card-title">{{widget.batchNumber}}</div>
+          <div class="widget-card-action" (click)="openAction(widget)">
+            <i class="fa fa-ellipsis-v"></i>
+            <div *ngIf="widget.widgetAction" class="widget-card-action-dropdown">
+              <ul>
+                <li><i class="fa fa-trash-o"></i>Delete</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="widget-card-content">
+          <h3>{{widget.brandName}}</h3>
+          <h4>{{widget.manufactureStage}}</h4>
+        </div>
+        <div class="widget-card-footer">
+          <div class="widget-event-icons">
+            <i class="fa fa-arrow-circle-o-up"></i>
+            <i class="fa fa-heart-o"></i>
+            <i class="fa fa-line-chart"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            +2
+            <!-- <ul>
+              <li *ngFor="let icon of widget.event">{{icon}}</li>
+              <li *ngIf="widget.event.length > 2">+ {{widget.event.length - 2}}</li>
+            </ul> -->
+          </div>
+          <div class="widget-company-logo"><img src="{{widget.imageLink}}" alt=""></div>
+        </div>
       </div>
     </div>
   </div>
+</div>
+

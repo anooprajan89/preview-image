@@ -8,6 +8,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Batch Overdue",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -15,6 +16,7 @@
           "brandName": "Feiba",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/feiba.png",
+          "status": "Incoming Due Date",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -22,6 +24,7 @@
           "brandName": "Ceprotin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/ceprotin.png",
+          "status": "Batch on Hold",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -29,6 +32,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "No change",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         }
       ]
@@ -42,6 +46,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Batch on Hold",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -49,6 +54,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Batch Overdue",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
           
         },
@@ -57,6 +63,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "No change",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -64,6 +71,7 @@
           "brandName": "Ceprotin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/ceprotin.png",
+          "status": "Incoming Due Date",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -71,6 +79,7 @@
           "brandName": "Feiba",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/feiba.png",
+          "status": "No change",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -78,6 +87,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "No change",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         }
       ]
@@ -91,6 +101,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Batch Overdue",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -98,6 +109,7 @@
           "brandName": "Ceprotin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/ceprotin.png",
+          "status": "Batch on Hold",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         
@@ -106,6 +118,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "No change",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -113,6 +126,7 @@
           "brandName": "Feiba",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/feiba.png",
+          "status": "Incoming Due Date",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         }
       ]
@@ -126,6 +140,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Incoming Due Date",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -133,6 +148,7 @@
           "brandName": "Feiba",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/feiba.png",
+          "status": "Batch Overdue",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -140,6 +156,7 @@
           "brandName": "Ceprotin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/ceprotin.png",
+          "status": "Batch on Hold",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         },
         {
@@ -147,6 +164,7 @@
           "brandName": "Human Albumin",
           "manufactureStage": "FDP",
           "imageLink": "assets/Images/hu.png",
+          "status": "Batch Overdue",
           "event" : ["Adhoc", "Atrisk", "SDN", "Tender" ]
         }
       ]

@@ -10,5 +10,7 @@ export interface CardList {
     brandName: string;
     manufactureStage:  string;
     imageLink: string;
+    status: string;
+    widgetAction: boolean;
     event: [];
 }
